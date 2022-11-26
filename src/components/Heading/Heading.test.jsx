@@ -85,4 +85,9 @@ describe('<Heading />', () => {
       'text-transform': 'uppercase',
     });
   });
+
+  it('should Match a Snapshot', () => {
+    const {container} = renderTheme(<Heading>Texto</Heading>);
+    expect(container.firstChild).toMatchSnapshot()
+  })
 });
